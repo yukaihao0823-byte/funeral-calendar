@@ -22,6 +22,10 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:‘Noto Serif TC’,‘Source Han Serif TC’,‘思源宋體’,‘蘋方-繁’,‘PingFang TC’,‘Apple LiSung’,‘新細明體’,serif;background:var(–paper);color:var(–ink);min-height:100vh;}
 
+/* 強制所有文字繼承宋體 */
+*{font-family:inherit;}
+input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,serif !important;}
+
 /* HEADER */
 .hdr{background:linear-gradient(180deg,#0e0505 0%,#1e0808 50%,#2a1005 100%);color:#f0e6cc;text-align:center;padding:26px 16px 20px;position:relative;overflow:hidden;}
 .hdr::before{content:’’;position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 48px,rgba(184,134,11,.04) 48px,rgba(184,134,11,.04) 49px);}
@@ -46,27 +50,27 @@ body{font-family:‘Noto Serif TC’,‘Source Han Serif TC’,‘思源宋體�
 /* CARD */
 .card{background:var(–card);border:1px solid var(–blt);border-top:3px solid var(–red);padding:16px 14px;margin-bottom:13px;box-shadow:0 2px 8px rgba(0,0,0,.06);}
 .card-gold{border-top-color:var(–gold);}
-.card-hd{font-size:12px;font-weight:700;color:var(–red);letter-spacing:.18em;margin-bottom:13px;padding-bottom:9px;border-bottom:1px dashed var(–border);display:flex;align-items:center;gap:7px;}
+.card-hd{font-size:12px;font-weight:700;color:var(–red);letter-spacing:.18em;margin-bottom:13px;padding-bottom:9px;border-bottom:1px dashed var(–border);display:flex;align-items:center;gap:7px;font-family:‘Noto Serif TC’,‘PingFang TC’,serif;}
 .card-hd-gold{color:var(–gold);}
 
 /* FORM */
 .row{display:flex;gap:10px;margin-bottom:11px;flex-wrap:wrap;}
 .fg{flex:1;min-width:120px;}
-.fg label{display:block;font-size:11px;color:var(–muted);letter-spacing:.12em;margin-bottom:4px;font-family:‘Noto Sans TC’,‘PingFang TC’,‘Apple SD Gothic Neo’,sans-serif;font-weight:500;}
-.fg input,.fg select{width:100%;padding:8px 10px;border:1px solid var(–border);background:var(–paper);font-family:‘Noto Serif TC’,serif;font-size:13px;color:var(–ink);outline:none;transition:all .2s;-webkit-appearance:none;border-radius:0;}
+.fg label{display:block;font-size:11px;color:var(–muted);letter-spacing:.12em;margin-bottom:4px;font-family:‘Noto Serif TC’,‘PingFang TC’,serif;font-weight:500;}
+.fg input,.fg select{width:100%;padding:8px 10px;border:1px solid var(–border);background:var(–paper);font-family:‘Noto Serif TC’,‘PingFang TC’,serif !important;font-size:13px;color:var(–ink);outline:none;transition:all .2s;-webkit-appearance:none;border-radius:0;}
 .fg input:focus,.fg select:focus{border-color:var(–red);background:#fff;box-shadow:0 0 0 2px rgba(139,26,26,.08);}
 
 /* GZ DISPLAY */
 .gz-box{background:var(–aged);border:1px dashed var(–border);padding:10px 13px;margin-bottom:10px;}
-.gz-box-title{font-size:10px;color:var(–muted);letter-spacing:.15em;margin-bottom:7px;font-family:‘Noto Sans TC’,sans-serif;}
-.gz-box-body{font-size:13px;min-height:18px;}
+.gz-box-title{font-size:10px;color:var(–muted);letter-spacing:.15em;margin-bottom:7px;font-family:‘Noto Serif TC’,‘PingFang TC’,serif;}
+.gz-box-body{font-size:13px;min-height:18px;font-family:‘Noto Serif TC’,‘PingFang TC’,serif;}
 .gz-tag{display:inline-block;background:var(–red);color:#fff;padding:2px 9px;font-size:13px;font-weight:600;letter-spacing:.12em;margin-right:5px;}
 .zd-tag{display:inline-block;background:var(–gold);color:#fff;padding:2px 7px;font-size:12px;letter-spacing:.08em;}
 .cf-tag{display:inline-block;background:#1a3060;color:#fff;padding:2px 7px;font-size:11px;letter-spacing:.08em;margin-left:4px;}
-.gz-note{font-size:10px;color:var(–muted);margin-top:5px;line-height:1.8;font-family:‘Noto Sans TC’,sans-serif;}
+.gz-note{font-size:10px;color:var(–muted);margin-top:5px;line-height:1.8;font-family:‘Noto Serif TC’,‘PingFang TC’,serif;}
 
 /* BUTTONS */
-.btn{display:block;width:100%;padding:11px;background:var(–red);color:#fff;border:none;font-family:‘Noto Serif TC’,serif;font-size:13px;font-weight:700;letter-spacing:.2em;cursor:pointer;transition:all .2s;text-align:center;}
+.btn{display:block;width:100%;padding:11px;background:var(–red);color:#fff;border:none;font-family:‘Noto Serif TC’,‘PingFang TC’,serif !important;font-size:13px;font-weight:700;letter-spacing:.2em;cursor:pointer;transition:all .2s;text-align:center;}
 .btn:hover{background:var(–deep-red);}
 .btn-gold{background:var(–gold);}
 .btn-gold:hover{background:#7a5c1e;}
