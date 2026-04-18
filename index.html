@@ -5,9 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>天佑生命擇日系統</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap');
 <style>
 
 :root {
@@ -20,27 +19,27 @@
 –danger:#b02020; –warn:#d4801a;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:‘Noto Serif TC’,‘Source Han Serif TC’,‘思源宋體’,‘蘋方-繁’,‘PingFang TC’,‘Apple LiSung’,‘新細明體’,serif;background:var(–paper);color:var(–ink);min-height:100vh;}
+body{font-family:‘Noto Serif TC’,‘Source Han Serif TC’,‘思源宋體’,‘蘋方-繁’,‘PingFang TC’,‘Apple LiSung’,‘新細明體’,serif;background:#f6efe0;color:#150f08;min-height:100vh;}
 
 /* 強制所有文字繼承宋體 */
-*{font-family:inherit;}
-input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,serif !important;}
+*{}
+input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,‘蘋方-繁’,serif !important;}
 
 /* HEADER */
 .hdr{background:linear-gradient(180deg,#0e0505 0%,#1e0808 50%,#2a1005 100%);color:#f0e6cc;text-align:center;padding:26px 16px 20px;position:relative;overflow:hidden;}
 .hdr::before{content:’’;position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 48px,rgba(184,134,11,.04) 48px,rgba(184,134,11,.04) 49px);}
-.hdr-orn{font-size:10px;letter-spacing:.5em;color:var(–gold-lt);opacity:.65;margin-bottom:7px;}
+.hdr-orn{font-size:10px;letter-spacing:.5em;color:#c9a84c;opacity:.65;margin-bottom:7px;}
 .hdr-title{font-size:clamp(18px,5vw,28px);font-weight:900;letter-spacing:.25em;color:#f5e8cc;text-shadow:0 0 40px rgba(201,168,76,.35);}
 .hdr-en{font-size:10px;color:rgba(240,220,180,.4);letter-spacing:.35em;margin-top:4px;font-family:‘Noto Sans TC’,sans-serif;font-weight:300;}
 .hdr-sub{font-size:11px;color:rgba(240,220,180,.6);letter-spacing:.25em;margin-top:6px;font-family:‘Noto Sans TC’,sans-serif;font-weight:300;}
 .hdr-badges{display:flex;justify-content:center;gap:8px;margin-top:11px;flex-wrap:wrap;}
-.badge{padding:2px 11px;border:1px solid rgba(201,168,76,.45);color:var(–gold-lt);font-size:10px;letter-spacing:.18em;font-family:‘Noto Sans TC’,sans-serif;}
+.badge{padding:2px 11px;border:1px solid rgba(201,168,76,.45);color:#c9a84c;font-size:10px;letter-spacing:.18em;font-family:‘Noto Sans TC’,sans-serif;}
 
 /* TABS */
 .tabs{display:flex;background:#1e0808;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
 .tabs::-webkit-scrollbar{display:none;}
 .tab{flex:1;min-width:64px;padding:12px 6px;text-align:center;font-size:11px;letter-spacing:.06em;color:rgba(240,210,160,.5);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;font-family:‘Noto Serif TC’,serif;font-weight:600;transition:all .2s;}
-.tab.active{color:#f5e6c8;border-bottom-color:var(–gold-lt);background:rgba(255,255,255,.04);}
+.tab.active{color:#f5e6c8;border-bottom-color:#c9a84c;background:rgba(255,255,255,.04);}
 .tab:hover:not(.active){color:rgba(240,210,160,.8);}
 
 /* PANELS */
@@ -48,165 +47,172 @@ input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,s
 .panel.active{display:block;}
 
 /* CARD */
-.card{background:var(–card);border:1px solid var(–blt);border-top:3px solid var(–red);padding:16px 14px;margin-bottom:13px;box-shadow:0 2px 8px rgba(0,0,0,.06);}
-.card-gold{border-top-color:var(–gold);}
-.card-hd{font-size:12px;font-weight:700;color:var(–red);letter-spacing:.18em;margin-bottom:13px;padding-bottom:9px;border-bottom:1px dashed var(–border);display:flex;align-items:center;gap:7px;font-family:‘Noto Serif TC’,‘PingFang TC’,serif;}
-.card-hd-gold{color:var(–gold);}
+.card{background:#fffdf7;border:1px solid #ddd0b0;border-top:3px solid #8b1a1a;padding:16px 14px;margin-bottom:13px;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.card-gold{border-top-color:#a07828;}
+.card-hd{font-size:12px;font-weight:700;color:#8b1a1a;letter-spacing:.18em;margin-bottom:13px;padding-bottom:9px;border-bottom:1px dashed #c4a96a;display:flex;align-items:center;gap:7px;font-family:‘Noto Serif TC’,‘PingFang TC’,‘蘋方-繁’,serif;}
+.card-hd-gold{color:#a07828;}
 
 /* FORM */
 .row{display:flex;gap:10px;margin-bottom:11px;flex-wrap:wrap;}
 .fg{flex:1;min-width:120px;}
-.fg label{display:block;font-size:11px;color:var(–muted);letter-spacing:.12em;margin-bottom:4px;font-family:‘Noto Serif TC’,‘PingFang TC’,serif;font-weight:500;}
-.fg input,.fg select{width:100%;padding:8px 10px;border:1px solid var(–border);background:var(–paper);font-family:‘Noto Serif TC’,‘PingFang TC’,serif !important;font-size:13px;color:var(–ink);outline:none;transition:all .2s;-webkit-appearance:none;border-radius:0;}
-.fg input:focus,.fg select:focus{border-color:var(–red);background:#fff;box-shadow:0 0 0 2px rgba(139,26,26,.08);}
+.fg label{display:block;font-size:11px;color:#7a6a50;letter-spacing:.12em;margin-bottom:4px;font-family:‘Noto Serif TC’,‘PingFang TC’,‘蘋方-繁’,serif;font-weight:500;}
+.fg input,.fg select{width:100%;padding:8px 10px;border:1px solid #c4a96a;background:#f6efe0;font-family:‘Noto Serif TC’,‘PingFang TC’,‘蘋方-繁’,serif !important;font-size:13px;color:#150f08;outline:none;transition:all .2s;-webkit-appearance:none;border-radius:0;}
+.fg input:focus,.fg select:focus{border-color:#8b1a1a;background:#fff;box-shadow:0 0 0 2px rgba(139,26,26,.08);}
 
 /* GZ DISPLAY */
-.gz-box{background:var(–aged);border:1px dashed var(–border);padding:10px 13px;margin-bottom:10px;}
-.gz-box-title{font-size:10px;color:var(–muted);letter-spacing:.15em;margin-bottom:7px;font-family:‘Noto Serif TC’,‘PingFang TC’,serif;}
-.gz-box-body{font-size:13px;min-height:18px;font-family:‘Noto Serif TC’,‘PingFang TC’,serif;}
-.gz-tag{display:inline-block;background:var(–red);color:#fff;padding:2px 9px;font-size:13px;font-weight:600;letter-spacing:.12em;margin-right:5px;}
-.zd-tag{display:inline-block;background:var(–gold);color:#fff;padding:2px 7px;font-size:12px;letter-spacing:.08em;}
+.gz-box{background:#ede3cc;border:1px dashed #c4a96a;padding:10px 13px;margin-bottom:10px;}
+.gz-box-title{font-size:10px;color:#7a6a50;letter-spacing:.15em;margin-bottom:7px;font-family:‘Noto Serif TC’,‘PingFang TC’,‘蘋方-繁’,serif;}
+.gz-box-body{font-size:13px;min-height:18px;font-family:‘Noto Serif TC’,‘PingFang TC’,‘蘋方-繁’,serif;}
+.gz-tag{display:inline-block;background:#8b1a1a;color:#fff;padding:2px 9px;font-size:13px;font-weight:600;letter-spacing:.12em;margin-right:5px;}
+.zd-tag{display:inline-block;background:#a07828;color:#fff;padding:2px 7px;font-size:12px;letter-spacing:.08em;}
 .cf-tag{display:inline-block;background:#1a3060;color:#fff;padding:2px 7px;font-size:11px;letter-spacing:.08em;margin-left:4px;}
-.gz-note{font-size:10px;color:var(–muted);margin-top:5px;line-height:1.8;font-family:‘Noto Serif TC’,‘PingFang TC’,serif;}
+.gz-note{font-size:10px;color:#7a6a50;margin-top:5px;line-height:1.8;font-family:‘Noto Serif TC’,‘PingFang TC’,‘蘋方-繁’,serif;}
 
 /* BUTTONS */
-.btn{display:block;width:100%;padding:11px;background:var(–red);color:#fff;border:none;font-family:‘Noto Serif TC’,‘PingFang TC’,serif !important;font-size:13px;font-weight:700;letter-spacing:.2em;cursor:pointer;transition:all .2s;text-align:center;}
-.btn:hover{background:var(–deep-red);}
-.btn-gold{background:var(–gold);}
+.btn{display:block;width:100%;padding:11px;background:#8b1a1a;color:#fff;border:none;font-family:‘Noto Serif TC’,‘PingFang TC’,‘蘋方-繁’,serif !important;font-size:13px;font-weight:700;letter-spacing:.2em;cursor:pointer;transition:all .2s;text-align:center;}
+.btn:hover{background:#5c0f0f;}
+.btn-gold{background:#a07828;}
 .btn-gold:hover{background:#7a5c1e;}
 
 /* RESULT WRAPPER */
-.res-wrap{margin-top:13px;border:1px solid var(–blt);border-top:3px solid var(–gold);background:#fff;animation:sIn .3s ease;}
+.res-wrap{margin-top:13px;border:1px solid #ddd0b0;border-top:3px solid #a07828;background:#fff;animation:sIn .3s ease;}
 @keyframes sIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
-.res-hd{background:var(–aged);padding:9px 13px;font-size:11px;font-weight:700;color:var(–red);letter-spacing:.15em;border-bottom:1px solid var(–blt);}
-.res-row{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 13px;border-bottom:1px dotted var(–blt);gap:8px;}
+.res-hd{background:#ede3cc;padding:9px 13px;font-size:11px;font-weight:700;color:#8b1a1a;letter-spacing:.15em;border-bottom:1px solid #ddd0b0;}
+.res-row{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 13px;border-bottom:1px dotted #ddd0b0;gap:8px;}
 .res-row:last-child{border-bottom:none;}
-.rl{color:var(–muted);font-size:11px;letter-spacing:.1em;flex-shrink:0;padding-top:2px;font-family:‘Noto Sans TC’,sans-serif;}
+.rl{color:#7a6a50;font-size:11px;letter-spacing:.1em;flex-shrink:0;padding-top:2px;font-family:‘Noto Sans TC’,sans-serif;}
 .rv{font-size:13px;font-weight:600;text-align:right;line-height:1.6;}
-.rv.big{font-size:15px;color:var(–red);}
+.rv.big{font-size:15px;color:#8b1a1a;}
 .rv small{display:block;font-size:11px;font-weight:400;}
-.rv .ln{color:var(–gold);font-size:11px;font-weight:500;}
+.rv .ln{color:#a07828;font-size:11px;font-weight:500;}
 
 /* SEVEN-DAY TABLE */
 .seven-tbl{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px;}
 .seven-tbl th{background:#2d1010;color:rgba(240,218,168,.9);padding:7px 8px;font-size:10px;letter-spacing:.12em;font-family:‘Noto Sans TC’,sans-serif;font-weight:500;border:1px solid #1a0808;text-align:center;}
-.seven-tbl td{padding:8px 9px;border:1px solid var(–blt);text-align:center;vertical-align:middle;line-height:1.5;}
+.seven-tbl td{padding:8px 9px;border:1px solid #ddd0b0;text-align:center;vertical-align:middle;line-height:1.5;}
 .seven-tbl tr:nth-child(even) td{background:rgba(245,239,224,.4);}
 .seven-tbl .key-day td{background:#fff5e8;font-weight:600;}
 .seven-tbl .warn-day td{background:#fff0f0;}
-.day-num{font-size:14px;font-weight:700;color:var(–red);}
+.day-num{font-size:14px;font-weight:700;color:#8b1a1a;}
 .day-label{display:inline-block;padding:1px 6px;font-size:10px;border-radius:1px;}
-.label-benshen{background:var(–red);color:#fff;}
-.label-key{background:var(–gold);color:#fff;}
+.label-benshen{background:#8b1a1a;color:#fff;}
+.label-key{background:#a07828;color:#fff;}
 .label-warn{background:#c04040;color:#fff;}
 
 /* AUSLIST */
 .aus-list{}
-.aus-item{display:flex;align-items:flex-start;gap:9px;padding:10px 13px;border-bottom:1px dotted var(–blt);}
+.aus-item{display:flex;align-items:flex-start;gap:9px;padding:10px 13px;border-bottom:1px dotted #ddd0b0;}
 .aus-item:last-child{border-bottom:none;}
 .aus-rank{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;}
-.r1{background:var(–red);color:#fff;}
-.r2{background:var(–gold);color:#fff;}
-.r3{background:var(–muted);color:#fff;}
+.r1{background:#8b1a1a;color:#fff;}
+.r2{background:#a07828;color:#fff;}
+.r3{background:#7a6a50;color:#fff;}
 .aus-info{flex:1;}
 .aus-date{font-size:14px;font-weight:700;}
-.aus-lunar{font-size:11px;color:var(–gold);margin-top:1px;}
+.aus-lunar{font-size:11px;color:#a07828;margin-top:1px;}
 .aus-tags{margin-top:4px;display:flex;flex-wrap:wrap;gap:3px;}
 .tg{display:inline-block;padding:1px 6px;font-size:10px;letter-spacing:.08em;border-radius:1px;}
-.tg-good{background:#fff0f0;border:1px solid var(–pale-red);color:var(–red);}
+.tg-good{background:#fff0f0;border:1px solid #c94040;color:#8b1a1a;}
 .tg-bad{background:#f0f0f8;border:1px solid #9090b0;color:#3535a0;}
-.tg-danger{background:#ffe0e0;border:1px solid var(–danger);color:var(–danger);font-weight:600;}
-.tg-warn{background:#fff3e0;border:1px solid var(–warn);color:var(–warn);}
-.tg-ok{background:var(–aged);border:1px solid var(–border);color:var(–muted);}
-.aus-shichen{font-size:11px;color:var(–green);margin-top:3px;}
+.tg-danger{background:#ffe0e0;border:1px solid #b02020;color:#b02020;font-weight:600;}
+.tg-warn{background:#fff3e0;border:1px solid #d4801a;color:#d4801a;}
+.tg-ok{background:#ede3cc;border:1px solid #c4a96a;color:#7a6a50;}
+.aus-shichen{font-size:11px;color:#2d6a4f;margin-top:3px;}
 
 /* DANGER BOX */
-.danger-box{background:#fff0f0;border:1px solid #d09090;border-left:4px solid var(–danger);padding:11px 13px;margin-top:11px;font-size:11px;line-height:2;font-family:‘Noto Sans TC’,sans-serif;color:#500000;}
-.danger-box strong{color:var(–danger);font-family:‘Noto Serif TC’,serif;}
-.warn-box{background:#fffbf0;border:1px solid #d4a020;border-left:4px solid var(–warn);padding:11px 13px;margin-top:11px;font-size:11px;line-height:2;font-family:‘Noto Sans TC’,sans-serif;color:#5a3000;}
-.warn-box strong{color:var(–warn);font-family:‘Noto Serif TC’,serif;}
-.note{background:#fffbf2;border:1px dashed var(–gold-lt);padding:10px 12px;font-size:11px;color:var(–muted);line-height:1.9;font-family:‘Noto Sans TC’,sans-serif;margin-top:11px;}
-.note strong{color:var(–red);font-family:‘Noto Serif TC’,serif;}
+.danger-box{background:#fff0f0;border:1px solid #d09090;border-left:4px solid #b02020;padding:11px 13px;margin-top:11px;font-size:11px;line-height:2;font-family:‘Noto Sans TC’,sans-serif;color:#500000;}
+.danger-box strong{color:#b02020;font-family:‘Noto Serif TC’,serif;}
+.warn-box{background:#fffbf0;border:1px solid #d4a020;border-left:4px solid #d4801a;padding:11px 13px;margin-top:11px;font-size:11px;line-height:2;font-family:‘Noto Sans TC’,sans-serif;color:#5a3000;}
+.warn-box strong{color:#d4801a;font-family:‘Noto Serif TC’,serif;}
+.note{background:#fffbf2;border:1px dashed #c9a84c;padding:10px 12px;font-size:11px;color:#7a6a50;line-height:1.9;font-family:‘Noto Sans TC’,sans-serif;margin-top:11px;}
+.note strong{color:#8b1a1a;font-family:‘Noto Serif TC’,serif;}
 .info-box{background:#eef4ff;border:1px solid #8090c0;padding:10px 12px;font-size:11px;line-height:1.8;font-family:‘Noto Sans TC’,sans-serif;color:#2a3a7a;margin-top:10px;}
 
 /* SEC TITLE */
-.sec{font-size:11px;font-weight:700;color:var(–ink);letter-spacing:.18em;margin:16px 0 9px;display:flex;align-items:center;gap:7px;}
-.sec::before{content:’’;display:block;width:3px;height:13px;background:var(–red);flex-shrink:0;}
+.sec{font-size:11px;font-weight:700;color:#150f08;letter-spacing:.18em;margin:16px 0 9px;display:flex;align-items:center;gap:7px;}
+.sec::before{content:’’;display:block;width:3px;height:13px;background:#8b1a1a;flex-shrink:0;}
 
 /* TABLE */
 .tbl{width:100%;border-collapse:collapse;font-size:11px;}
 .tbl th{background:#2d1010;color:rgba(240,218,168,.9);padding:7px 9px;font-size:10px;letter-spacing:.12em;font-family:‘Noto Sans TC’,sans-serif;font-weight:500;border:1px solid #1a0808;}
-.tbl td{padding:7px 9px;border:1px solid var(–blt);vertical-align:middle;line-height:1.5;}
+.tbl td{padding:7px 9px;border:1px solid #ddd0b0;vertical-align:middle;line-height:1.5;}
 .tbl tr:nth-child(even) td{background:rgba(245,239,224,.4);}
 .tbl tr:hover td{background:#fff5e8;}
 
 /* YEAR TBL */
-.ytbl-wrap{max-height:380px;overflow-y:auto;border:1px solid var(–blt);}
+.ytbl-wrap{max-height:380px;overflow-y:auto;border:1px solid #ddd0b0;}
 .ytbl-wrap::-webkit-scrollbar{width:4px;}
-.ytbl-wrap::-webkit-scrollbar-thumb{background:var(–border);}
+.ytbl-wrap::-webkit-scrollbar-thumb{background:#c4a96a;}
 .ysearch{display:flex;gap:7px;margin-bottom:10px;}
-.ysearch input{flex:1;padding:8px 10px;border:1px solid var(–border);font-family:‘Noto Serif TC’,serif;font-size:13px;background:var(–paper);outline:none;}
-.ysearch input:focus{border-color:var(–red);background:#fff;}
+.ysearch input{flex:1;padding:8px 10px;border:1px solid #c4a96a;font-family:‘Noto Serif TC’,serif;font-size:13px;background:#f6efe0;outline:none;}
+.ysearch input:focus{border-color:#8b1a1a;background:#fff;}
 
 /* TIMELINE */
 .tl{padding-left:20px;position:relative;}
-.tl::before{content:’’;position:absolute;left:7px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(–red),var(–gold));}
-.tl-item{position:relative;margin-bottom:11px;background:var(–card);border:1px solid var(–blt);padding:10px 12px;}
-.tl-item::before{content:’’;position:absolute;left:-15px;top:13px;width:8px;height:8px;border-radius:50%;background:var(–red);border:2px solid var(–paper);box-shadow:0 0 0 2px var(–red);}
-.tl-d{font-size:12px;font-weight:700;color:var(–red);margin-bottom:2px;}
-.tl-t{font-size:11px;color:var(–muted);line-height:1.7;font-family:‘Noto Sans TC’,sans-serif;}
+.tl::before{content:’’;position:absolute;left:7px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,#8b1a1a,#a07828);}
+.tl-item{position:relative;margin-bottom:11px;background:#fffdf7;border:1px solid #ddd0b0;padding:10px 12px;}
+.tl-item::before{content:’’;position:absolute;left:-15px;top:13px;width:8px;height:8px;border-radius:50%;background:#8b1a1a;border:2px solid #f6efe0;box-shadow:0 0 0 2px #8b1a1a;}
+.tl-d{font-size:12px;font-weight:700;color:#8b1a1a;margin-bottom:2px;}
+.tl-t{font-size:11px;color:#7a6a50;line-height:1.7;font-family:‘Noto Sans TC’,sans-serif;}
 
 /* MEMBER */
 .mlist{margin-top:8px;}
 .mitem{display:flex;gap:7px;align-items:center;margin-bottom:7px;flex-wrap:wrap;}
 .mitem .fg{min-width:90px;}
-.mrem{background:none;border:1px solid var(–border);color:var(–muted);padding:5px 9px;font-size:11px;cursor:pointer;font-family:‘Noto Serif TC’,serif;flex-shrink:0;}
-.mrem:hover{background:#fff0f0;border-color:var(–red);color:var(–red);}
-.btn-add{background:none;border:1px dashed var(–border);color:var(–muted);padding:7px;font-size:11px;cursor:pointer;width:100%;letter-spacing:.12em;font-family:‘Noto Serif TC’,serif;transition:all .2s;margin-top:4px;}
-.btn-add:hover{border-color:var(–gold);color:var(–gold);background:#fffbf2;}
+.mrem{background:none;border:1px solid #c4a96a;color:#7a6a50;padding:5px 9px;font-size:11px;cursor:pointer;font-family:‘Noto Serif TC’,serif;flex-shrink:0;}
+.mrem:hover{background:#fff0f0;border-color:#8b1a1a;color:#8b1a1a;}
+.btn-add{background:none;border:1px dashed #c4a96a;color:#7a6a50;padding:7px;font-size:11px;cursor:pointer;width:100%;letter-spacing:.12em;font-family:‘Noto Serif TC’,serif;transition:all .2s;margin-top:4px;}
+.btn-add:hover{border-color:#a07828;color:#a07828;background:#fffbf2;}
 
 /* SHICHEN */
 .sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:9px;}
-.sc-card{background:var(–card);border:1px solid var(–blt);padding:9px 7px;text-align:center;cursor:pointer;transition:all .18s;}
-.sc-card:hover{border-color:var(–red);}
+.sc-card{background:#fffdf7;border:1px solid #ddd0b0;padding:9px 7px;text-align:center;cursor:pointer;transition:all .18s;}
+.sc-card:hover{border-color:#8b1a1a;}
 .sc-card.sel{background:#2d1010;color:#f5e6c8;border-color:#2d1010;}
 .sc-name{font-size:14px;font-weight:700;}
 .sc-time{font-size:10px;opacity:.7;margin-top:1px;font-family:‘Noto Sans TC’,sans-serif;}
 .sc-desc{font-size:10px;margin-top:2px;}
-.sc-good .sc-desc{color:var(–red);}
-.sc-bad .sc-desc{color:var(–muted);}
-.sc-card.sel .sc-desc{color:var(–gold-lt);}
+.sc-good .sc-desc{color:#8b1a1a;}
+.sc-bad .sc-desc{color:#7a6a50;}
+.sc-card.sel .sc-desc{color:#c9a84c;}
 
-.divider{border:none;border-top:1px dashed var(–blt);margin:13px 0;}
+.divider{border:none;border-top:1px dashed #ddd0b0;margin:13px 0;}
 .fw-best{background:#fff8e0;color:#8a6000;font-weight:700;text-align:center;}
 .fw-ok{background:#f0fff4;color:#2d6a4f;font-weight:600;text-align:center;}
-.fw-pass{background:#f5f5f5;color:var(–muted);text-align:center;}
-.fw-bad{background:#fff0f0;color:var(–danger);font-weight:700;text-align:center;}
+.fw-pass{background:#f5f5f5;color:#7a6a50;text-align:center;}
+.fw-bad{background:#fff0f0;color:#b02020;font-weight:700;text-align:center;}
 .fw-result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:14px;}
-.fw-item{border:2px solid var(–blt);padding:14px 12px;text-align:center;border-radius:2px;}
-.fw-item.best{border-color:var(–gold);background:#fffbef;}
-.fw-item.ok{border-color:var(–green);background:#f0fff4;}
-.fw-item.pass{border-color:var(–blt);background:#f8f8f8;}
-.fw-item.bad{border-color:var(–danger);background:#fff0f0;}
+.fw-item{border:2px solid #ddd0b0;padding:14px 12px;text-align:center;border-radius:2px;}
+.fw-item.best{border-color:#a07828;background:#fffbef;}
+.fw-item.ok{border-color:#2d6a4f;background:#f0fff4;}
+.fw-item.pass{border-color:#ddd0b0;background:#f8f8f8;}
+.fw-item.bad{border-color:#b02020;background:#fff0f0;}
 .fw-item .fw-rank{font-size:10px;letter-spacing:.15em;margin-bottom:5px;font-family:‘Noto Sans TC’,sans-serif;}
 .fw-item .fw-dir{font-size:26px;font-weight:900;letter-spacing:.1em;}
 .fw-item .fw-label{font-size:11px;margin-top:4px;font-family:‘Noto Sans TC’,sans-serif;}
-.fw-item.best .fw-rank{color:var(–gold);}
-.fw-item.best .fw-dir{color:var(–gold);}
-.fw-item.ok .fw-rank{color:var(–green);}
-.fw-item.ok .fw-dir{color:var(–green);}
-.fw-item.bad .fw-rank{color:var(–danger);}
-.fw-item.bad .fw-dir{color:var(–danger);}
+.fw-item.best .fw-rank{color:#a07828;}
+.fw-item.best .fw-dir{color:#a07828;}
+.fw-item.ok .fw-rank{color:#2d6a4f;}
+.fw-item.ok .fw-dir{color:#2d6a4f;}
+.fw-item.bad .fw-rank{color:#b02020;}
+.fw-item.bad .fw-dir{color:#b02020;}
 .hidden{display:none!important;}
-.footer{text-align:center;padding:16px;font-size:10px;color:var(–muted-lt);border-top:1px solid var(–blt);letter-spacing:.12em;font-family:‘Noto Sans TC’,sans-serif;margin-top:20px;line-height:2;}
+.footer{text-align:center;padding:16px;font-size:10px;color:#a09070;border-top:1px solid #ddd0b0;letter-spacing:.12em;font-family:‘Noto Sans TC’,sans-serif;margin-top:20px;line-height:2;}
 
 @media(max-width:480px){
 .panel{padding:13px 10px 50px;}
 .sc-grid{grid-template-columns:repeat(2,1fr);}
 }
+
+/* === FORCE FONT EVERYWHERE === */
+body,div,p,span,h1,h2,h3,h4,td,th,li,label,button,a,strong,small,select,option {
+font-family: ‘Noto Serif TC’, ‘PingFang TC’, ‘蘋方-繁’, ‘新細明體’, serif !important;
+}
+input { font-family: ‘Noto Serif TC’, ‘PingFang TC’, ‘蘋方-繁’, serif !important; }
 </style>
 
 </head>
+<body>
 <body>
 
 <div class="hdr">
@@ -237,7 +243,7 @@ input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,s
     </div>
     <div class="gz-box">
       <div class="gz-box-title">▶ 往生者本命</div>
-      <div class="gz-box-body" id="a_gz"><span style="color:var(--muted-lt);font-size:12px">輸入出生年後自動顯示</span></div>
+      <div class="gz-box-body" id="a_gz"><span style="color:#a09070;font-size:12px">輸入出生年後自動顯示</span></div>
     </div>
     <button class="btn" onclick="calcBairi()">推算百日・對年・三年・合爐</button>
   </div>
@@ -277,7 +283,7 @@ input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,s
     <div class="row">
       <div class="fg"><label>往生者出生年（西元）</label><input type="number" id="c_dec" placeholder="例：1945" min="1912" max="2031" oninput="showGZ('c_dec','c_decgz')"></div>
     </div>
-    <div class="gz-box"><div class="gz-box-title">▶ 往生者本命</div><div class="gz-box-body" id="c_decgz"><span style="color:var(--muted-lt);font-size:12px">輸入出生年後自動顯示</span></div></div>
+    <div class="gz-box"><div class="gz-box-title">▶ 往生者本命</div><div class="gz-box-body" id="c_decgz"><span style="color:#a09070;font-size:12px">輸入出生年後自動顯示</span></div></div>
   </div>
   <div class="card">
     <div class="card-hd">👨‍👩‍👧 家屬本命（輸入西元出生年）</div>
@@ -311,7 +317,7 @@ input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,s
       <div class="fg"><label>往生者出生年（西元）</label><input type="number" id="d_birth" placeholder="例：1940" min="1912" max="2031" oninput="showGZ('d_birth','d_gz');updateJinDir()"></div>
       <div class="fg"><label>安葬方式</label><select id="d_type"><option value="tower">靈骨塔入塔</option><option value="burial">土葬安葬</option><option value="eco">環保葬</option></select></div>
     </div>
-    <div class="gz-box"><div class="gz-box-title">▶ 往生者本命</div><div class="gz-box-body" id="d_gz"><span style="color:var(--muted-lt);font-size:12px">輸入出生年後自動顯示</span></div></div>
+    <div class="gz-box"><div class="gz-box-title">▶ 往生者本命</div><div class="gz-box-body" id="d_gz"><span style="color:#a09070;font-size:12px">輸入出生年後自動顯示</span></div></div>
   </div>
 
   <div class="card">
@@ -354,7 +360,7 @@ input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,s
       <div class="fg"><label>往生者出生年（西元）</label><input type="number" id="e_birth" placeholder="例：1940" min="1912" max="2031" oninput="showGZ('e_birth','e_gz');updateHeluDir()"></div>
       <div class="fg"><label>儀式類型</label><select id="e_type"><option value="helu">合爐（牌位入祖先爐）</option><option value="anxiang">安香（新設神位）</option><option value="chuhuo">出火（搬遷神位）</option></select></div>
     </div>
-    <div class="gz-box"><div class="gz-box-title">▶ 往生者本命</div><div class="gz-box-body" id="e_gz"><span style="color:var(--muted-lt);font-size:12px">輸入出生年後自動顯示</span></div></div>
+    <div class="gz-box"><div class="gz-box-title">▶ 往生者本命</div><div class="gz-box-body" id="e_gz"><span style="color:#a09070;font-size:12px">輸入出生年後自動顯示</span></div></div>
   </div>
 
   <div class="card">
@@ -412,16 +418,16 @@ input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,s
     <div class="card-hd">🧭 塔位方位查詢</div>
     <div class="note" style="margin-bottom:12px">
       <strong>使用說明：</strong>輸入往生者出生年，系統自動依生肖顯示大利方、小利方、退方、煞方。<br>
-      選位優先順序：<strong style="color:var(--red)">大利方 → 小利方 → 退方</strong>，煞方絕對迴避。
+      選位優先順序：<strong style="color:#8b1a1a">大利方 → 小利方 → 退方</strong>，煞方絕對迴避。
     </div>
     <div class="row">
       <div class="fg"><label>往生者出生年（西元）</label><input type="number" id="f_birth" placeholder="例：1940" min="1912" max="2031" oninput="showGZ('f_birth','f_gz');calcFangWei()"></div>
     </div>
-    <div class="gz-box"><div class="gz-box-title">▶ 往生者本命</div><div class="gz-box-body" id="f_gz"><span style="color:var(--muted-lt);font-size:12px">輸入出生年後自動顯示</span></div></div>
+    <div class="gz-box"><div class="gz-box-title">▶ 往生者本命</div><div class="gz-box-body" id="f_gz"><span style="color:#a09070;font-size:12px">輸入出生年後自動顯示</span></div></div>
   </div>
 
   <div id="f_res" class="hidden">
-    <div class="card" style="border-top-color:var(--gold)">
+    <div class="card" style="border-top-color:#a07828">
       <div class="card-hd card-hd-gold">🧭 塔位方位建議</div>
       <div id="f_fangwei_body"></div>
     </div>
@@ -499,7 +505,7 @@ input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,s
   <div class="card">
     <div class="card-hd">🔍 個人本命查詢</div>
     <div class="row"><div class="fg"><label>輸入西元出生年</label><input type="number" id="q_yr" placeholder="例：1965" min="1912" max="2031" oninput="showGZ('q_yr','q_res')"></div></div>
-    <div class="gz-box"><div class="gz-box-body" id="q_res"><span style="color:var(--muted-lt);font-size:12px">輸入後顯示完整本命資訊</span></div></div>
+    <div class="gz-box"><div class="gz-box-body" id="q_res"><span style="color:#a09070;font-size:12px">輸入後顯示完整本命資訊</span></div></div>
   </div>
 </div>
 
@@ -510,12 +516,12 @@ input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,s
   <div class="card">
     <div class="card-hd card-hd-gold">⚠ 喪禮三大凶日說明</div>
     <table class="tbl"><thead><tr><th>凶日名稱</th><th>定義</th><th>影響</th></tr></thead><tbody>
-      <tr><td><strong style="color:var(--danger)">月破大耗</strong></td><td>每月地支與月支相沖之日<br>（如子月→午日）</td><td>萬事皆凶，喪禮大忌，出殯火化絕對迴避</td></tr>
-      <tr><td><strong style="color:var(--danger)">重　喪</strong></td><td>每月特定天干日<br>正月甲、二月乙、三月戊…</td><td>恐招另一喪事，需迴避出殯安葬</td></tr>
-      <tr><td><strong style="color:var(--danger)">三　喪</strong></td><td>四季特定地支日<br>春丑・夏辰・秋未・冬戌</td><td>四季安葬大犯忌，易連喪，謹慎迴避</td></tr>
-      <tr><td><strong style="color:var(--warn)">天地重喪</strong></td><td>每月巳・亥日</td><td>天門地戶俱開，犯內重喪</td></tr>
-      <tr><td><strong style="color:var(--warn)">到呼重喪</strong></td><td>每月寅・辰日</td><td>到呼重喪，謹慎使用</td></tr>
-      <tr><td><strong style="color:var(--warn)">受死日</strong></td><td>春戌・夏丑・秋辰・冬未</td><td>萬事不宜，行喪忌</td></tr>
+      <tr><td><strong style="color:#b02020">月破大耗</strong></td><td>每月地支與月支相沖之日<br>（如子月→午日）</td><td>萬事皆凶，喪禮大忌，出殯火化絕對迴避</td></tr>
+      <tr><td><strong style="color:#b02020">重　喪</strong></td><td>每月特定天干日<br>正月甲、二月乙、三月戊…</td><td>恐招另一喪事，需迴避出殯安葬</td></tr>
+      <tr><td><strong style="color:#b02020">三　喪</strong></td><td>四季特定地支日<br>春丑・夏辰・秋未・冬戌</td><td>四季安葬大犯忌，易連喪，謹慎迴避</td></tr>
+      <tr><td><strong style="color:#d4801a">天地重喪</strong></td><td>每月巳・亥日</td><td>天門地戶俱開，犯內重喪</td></tr>
+      <tr><td><strong style="color:#d4801a">到呼重喪</strong></td><td>每月寅・辰日</td><td>到呼重喪，謹慎使用</td></tr>
+      <tr><td><strong style="color:#d4801a">受死日</strong></td><td>春戌・夏丑・秋辰・冬未</td><td>萬事不宜，行喪忌</td></tr>
     </tbody></table>
   </div>
   <div class="card">
@@ -524,6 +530,8 @@ input,select,button,textarea{font-family:‘Noto Serif TC’,‘PingFang TC’,s
     <table class="tbl"><thead><tr><th>本命干支</th><th>生肖</th><th>正沖</th><th>三合</th></tr></thead><tbody id="gzTb"></tbody></table>
   </div>
 </div>
+
+<div class="footer">天佑生命擇日系統　採用林先知通書原則　六十甲子精算版<br>民國1–120年（西元1912–2031）完整支援　本系統僅供參考，實際儀式請諮詢專業禮儀師或擇日師</div>
 
 <div class="footer">天佑生命擇日系統　採用林先知通書原則　六十甲子精算版<br>民國1–120年（西元1912–2031）完整支援　本系統僅供參考，實際儀式請諮詢專業禮儀師或擇日師</div>
 
@@ -744,7 +752,7 @@ function renderAus(candidates,topN=6){
 function showGZ(inId,outId){
   const v=parseInt(document.getElementById(inId).value);
   const el=document.getElementById(outId);
-  if(!v||v<1912||v>2031){el.innerHTML='<span style="color:var(--muted-lt);font-size:12px">請輸入西元年（1912–2031）</span>';return;}
+  if(!v||v<1912||v>2031){el.innerHTML='<span style="color:#a09070;font-size:12px">請輸入西元年（1912–2031）</span>';return;}
   const gz=getGZ(v),cf=getConflict(gz),sh=getSanhe(gz.bIdx);
   const age=2026-v+1;
   el.innerHTML=`<span class="gz-tag">${gz.gz}年</span><span class="zd-tag">${gz.zodiac}</span><span class="cf-tag">正沖：${cf.gz}日（${cf.zodiac}）</span>
@@ -782,7 +790,7 @@ function calcBairi(){
     ${gz?`<div class="res-row"><span class="rl">往生者本命</span><span class="rv"><span class="gz-tag" style="font-size:12px">${gz.gz}年</span><span class="zd-tag" style="font-size:11px">${gz.zodiac}</span><small>正沖：${getConflict(gz).gz}日</small></span></div>`:''}
     <div class="res-row"><span class="rl">百日（第100天）</span><span class="rv big">${fmtD(b100)}<small class="ln">${fmtL(b100)}</small></span></div>
     <div class="res-row"><span class="rl">對年（小祥）</span><span class="rv big">${fmtD(duinian)}<small class="ln">${fmtL(duinian)}</small></span></div>
-    <div class="res-row"><span class="rl">三年（大祥）</span><span class="rv">${fmtD(san)}<small style="color:var(--gold)">建議對年當日同辦</small></span></div>
+    <div class="res-row"><span class="rl">三年（大祥）</span><span class="rv">${fmtD(san)}<small style="color:#a07828">建議對年當日同辦</small></span></div>
     <div class="res-row"><span class="rl">合爐建議</span><span class="rv">${fmtD(duinian)}<small>對年當日或另擇吉日</small></span></div>
   </div>`;
 
@@ -818,10 +826,10 @@ function calcQiRi(){
       const isFirst=(i===0);
       html+=`<tr class="${isFirst?'key-day':''}">
         <td><span class="day-label ${isFirst?'label-key':''}">${names[i]}</span></td>
-        <td><strong>${fmtD(tw_d)}</strong><br><small style="color:var(--danger)">亥時 21–23時</small></td>
-        <td style="font-size:10px;color:var(--gold)">${fmtL(tw_d)}</td>
+        <td><strong>${fmtD(tw_d)}</strong><br><small style="color:#b02020">亥時 21–23時</small></td>
+        <td style="font-size:10px;color:#a07828">${fmtL(tw_d)}</td>
         <td><strong>${fmtD(cn_d)}</strong></td>
-        <td style="font-size:10px;color:var(--gold)">${fmtL(cn_d)}</td>
+        <td style="font-size:10px;color:#a07828">${fmtL(cn_d)}</td>
       </tr>`;
     }
     html+=`</tbody></table>`;
@@ -835,9 +843,9 @@ function calcQiRi(){
       const warn=getYuePo(d)||getZhongSang(d)||getSanSang(d);
       html+=`<tr class="${warn?'warn-day':isFirst?'key-day':''}">
         <td><span class="day-label ${isFirst?'label-key':warn?'label-warn':''}">${names[i]}</span></td>
-        <td><strong>${fmtD(d)}</strong>${isTW&&isFirst?'<br><small style="color:var(--danger)">⏱ 亥時（21–23時）</small>':''}</td>
-        <td style="color:var(--gold);font-size:11px">${fmtL(d)}</td>
-        <td style="font-size:10px">${warn?'<span style="color:var(--danger);font-weight:600">⚠ 請注意凶日</span>':isTW?(i===0?'傳統本省頭七':'亥時誦經'):(i===0?'正信頭七':'誦經超渡')}</td>
+        <td><strong>${fmtD(d)}</strong>${isTW&&isFirst?'<br><small style="color:#b02020">⏱ 亥時（21–23時）</small>':''}</td>
+        <td style="color:#a07828;font-size:11px">${fmtL(d)}</td>
+        <td style="font-size:10px">${warn?'<span style="color:#b02020;font-weight:600">⚠ 請注意凶日</span>':isTW?(i===0?'傳統本省頭七':'亥時誦經'):(i===0?'正信頭七':'誦經超渡')}</td>
       </tr>`;
     }
     html+=`</tbody></table>`;
@@ -903,7 +911,7 @@ function buildYearTbl(){
       <td>${y}</td><td>民國${mg}年</td>
       <td>${gz.gz}</td><td>${gz.zodiac}</td>
       <td><strong>${gz.gz}</strong></td>
-      <td style="color:var(--danger)">${cf.gz}日（${cf.zodiac}）</td>
+      <td style="color:#b02020">${cf.gz}日（${cf.zodiac}）</td>
     </tr>`;
   }
   document.getElementById('ytb').innerHTML=rows;
@@ -949,7 +957,7 @@ function buildGZTbl(){
   for(let i=0;i<60;i++){
     const gz={sIdx:i%10,bIdx:i%12,gz:ST_ARR[i%10]+BR_ARR[i%12],zodiac:ZD_TW[i%12]};
     const cf=getConflict(gz),sh=getSanhe(gz.bIdx);
-    rows+=`<tr><td><strong>${gz.gz}</strong></td><td>${gz.zodiac}</td><td style="color:var(--danger)">${cf.gz}（${cf.zodiac}）</td><td style="color:var(--green)">${sh}</td></tr>`;
+    rows+=`<tr><td><strong>${gz.gz}</strong></td><td>${gz.zodiac}</td><td style="color:#b02020">${cf.gz}（${cf.zodiac}）</td><td style="color:#2d6a4f">${sh}</td></tr>`;
   }
   document.getElementById('gzTb').innerHTML=rows;
 }
@@ -1046,8 +1054,8 @@ function updateHeluDir(){
   const j=document.getElementById('e_dir_judge');
   if((!sd&&!td)||!by||by<1912){j.classList.add('hidden');return;}
   let html='<div style="padding:10px 0">';
-  if(sd){html+=`<div style="margin-bottom:6px"><strong style="font-size:11px;color:var(--muted)">神桌方位：</strong>${dirJudgeHTML(sd,by,null)}</div>`;}
-  if(td){html+=`<div><strong style="font-size:11px;color:var(--muted)">塔位方位：</strong>${dirJudgeHTML(td,by,null)}</div>`;}
+  if(sd){html+=`<div style="margin-bottom:6px"><strong style="font-size:11px;color:#7a6a50">神桌方位：</strong>${dirJudgeHTML(sd,by,null)}</div>`;}
+  if(td){html+=`<div><strong style="font-size:11px;color:#7a6a50">塔位方位：</strong>${dirJudgeHTML(td,by,null)}</div>`;}
   html+='</div>';
   j.innerHTML=html;
   j.classList.remove('hidden');
@@ -1104,7 +1112,7 @@ function calcJin(){
     dirNote=`<div class="warn-box" style="margin-top:10px">
       <strong>方位煞提醒：</strong><br>
       選定坐向：<strong>${DIR_LABEL[dir]}（${DIR_FACE[dir]}）</strong><br>
-      ${ySha===dir?`⚠ <strong style="color:var(--danger)">本坐向逢${nowYear}年年煞！</strong>建議選天德日・月德日化解，或考慮更換方位。`:`✓ ${nowYear}年年煞在${DIR_LABEL[ySha]}，本坐向無年煞。`}
+      ${ySha===dir?`⚠ <strong style="color:#b02020">本坐向逢${nowYear}年年煞！</strong>建議選天德日・月德日化解，或考慮更換方位。`:`✓ ${nowYear}年年煞在${DIR_LABEL[ySha]}，本坐向無年煞。`}
     </div>`;
   }
 
@@ -1158,8 +1166,8 @@ function calcHelu(){
   let dirSummary='';
   if(sd||td){
     dirSummary=`<div class="warn-box" style="margin-top:10px"><strong>方位煞說明：</strong><br>`;
-    if(sd)dirSummary+=`神桌${DIR_LABEL[sd]}：年煞${yearSha===sd?'<strong style="color:var(--danger)">⚠ 逢年煞！建議天德・月德日進行</strong>':'✓ 無年煞'}。<br>`;
-    if(td)dirSummary+=`塔位${DIR_LABEL[td]}：年煞${yearSha===td?'<strong style="color:var(--danger)">⚠ 逢年煞！</strong>':'✓ 無年煞'}。`;
+    if(sd)dirSummary+=`神桌${DIR_LABEL[sd]}：年煞${yearSha===sd?'<strong style="color:#b02020">⚠ 逢年煞！建議天德・月德日進行</strong>':'✓ 無年煞'}。<br>`;
+    if(td)dirSummary+=`塔位${DIR_LABEL[td]}：年煞${yearSha===td?'<strong style="color:#b02020">⚠ 逢年煞！</strong>':'✓ 無年煞'}。`;
     dirSummary+=`</div>`;
   }
 
@@ -1207,7 +1215,7 @@ function calcFangWei(){
   ];
 
   const html=`
-    <div style="padding:10px 14px 6px;font-size:12px;color:var(--muted);border-bottom:1px dashed var(--blt);">
+    <div style="padding:10px 14px 6px;font-size:12px;color:#7a6a50;border-bottom:1px dashed #ddd0b0;">
       往生者：<span class="gz-tag" style="font-size:11px">${gz.gz}年</span>
       <span class="zd-tag" style="font-size:11px">${gz.zodiac}</span>
     </div>
@@ -1217,7 +1225,7 @@ function calcFangWei(){
           <div class="fw-rank">${it.rank}</div>
           <div class="fw-dir">${it.dir}</div>
           <div class="fw-label">${DIR_ARROW[it.dir]}</div>
-          <div class="fw-label" style="margin-top:4px;color:var(--muted)">${it.note}</div>
+          <div class="fw-label" style="margin-top:4px;color:#7a6a50">${it.note}</div>
         </div>`).join('')}
     </div>`;
 
